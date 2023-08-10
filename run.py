@@ -75,7 +75,8 @@ def main():
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
-        word = get_word(word_list)    
+        word = get_word(word_list)
+        play(word)   
 
 
 def get_word(word_list):
