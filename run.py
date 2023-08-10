@@ -75,7 +75,7 @@ def get_word(word_list):
     """
     Randomly selects a word from the given word lists.
     """
-    random.choice(word_list).upper()
+    return random.choice(word_list).upper()
 
 
 
