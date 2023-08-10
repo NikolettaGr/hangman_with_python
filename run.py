@@ -51,24 +51,28 @@ def main():
     Main function that handles level selection
     and gameplay.
     """
-    print("Choose level:")
-    print("1. Easy")
-    print("2. Medium")
-    print("3. Hard")
-    print("4. Exit")
-    
-    level_choice = input("Enter your choice (1, 2, 3, or 4 to exit): \n")
+    clear_screen()
 
-    if level_choice == "1":
-        word_list = easy_list
-    elif level_choice == "2":
-        word_list = medium_list
-    elif level_choice == "3":
-        word_list = hard_list
-    elif level_choice == "4":
-        welcome_message()
-    else:
-        print("Invalid choice. Please enter 1, 2, 3 or 4.")
+    while True:
+        print("Choose level:")
+        print("1. Easy")
+        print("2. Medium")
+        print("3. Hard")
+        print("4. Exit")
+    
+        level_choice = input("Enter your choice (1, 2, 3, or 4 to exit): \n")
+
+        if level_choice == "1":
+            word_list = easy_list
+        elif level_choice == "2":
+            word_list = medium_list
+        elif level_choice == "3":
+            word_list = hard_list
+        elif level_choice == "4":
+            clear_screen()
+            welcome_message()
+        else:
+            print("Invalid choice. Please enter 1, 2, 3 or 4.")
 
 
 def get_word(word_list):
