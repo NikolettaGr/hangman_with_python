@@ -1,8 +1,10 @@
 import colorama
-from colorama import Fore
+from colorama import Fore, Style
 import random
 import os
 from words import easy_list, medium_list, hard_list
+
+colorama.init(autoreset=True)
 
 def clear_screen():
     """
@@ -16,17 +18,17 @@ def welcome_message():
     Displays the welcome message and menu options to
     the player.
     """
-    print("Welcome to Hangman Game! 😀")
-    print("Options:")
-    print("1. Rules")
-    print("2. Start Game")
+    print(f"{Fore.MAGENTA}Welcome to Hangman Game! 😀{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}Options:{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}1.{Style.RESET_ALL} Rules")
+    print(f"{Fore.GREEN}2.{Style.RESET_ALL} Start Game")
 
-    choice = input("Enter your choice (1 or 2): \n")
+    choice = input(f"{Fore.YELLOW}Enter your choice (1 or 2): \n{Style.RESET_ALL}")
 
     if choice == "1":
         show_rules()
-        print("1.Go back 🔙")
-        answer = input("Enter number 1 to go back: \n")
+        print(f"{Fore.GREEN}1.{Style.RESET_ALL}Go back 🔙")
+        answer = input(f"{Fore.YELLOW}Enter number 1 to go back: \n{Style.RESET_ALL}")
         if answer == "1":
             clear_screen()
             welcome_message()
@@ -34,18 +36,18 @@ def welcome_message():
     elif choice == "2":
         main()
     else:
-        print("Invalid choice. Please enter 1 or 2.")
+        print(f"{Fore.RED}Invalid choice. Please enter 1 or 2.{Style.RESET_ALL}")
 
 
 def show_rules():
     """
     Displays the rules of the Hangman game.
     """
-    print("""\nThe objective of Hangman is to guess a hidden word letter by letter.\n
+    print(f"""{Fore.GREEN}\nThe objective of Hangman is to guess a hidden word letter by letter.\n
 The player has a limited number of attempts to guess the word correctly.\n
 For each incorrect gues, a part of a 'hangman' figure is drawn.\n
 The player wins by guessing the word before the hangman figure is fully drawn,\n
-and loses if the 'hangman' figure is completed before guessing the word.\n""")
+and loses if the 'hangman' figure is completed before guessing the word.\n{Style.RESET_ALL}""")
 
 
 def main():
@@ -56,13 +58,13 @@ def main():
     clear_screen()
 
     while True:
-        print("Choose level:")
-        print("1. Easy")
-        print("2. Medium")
-        print("3. Hard")
-        print("4. Exit")
+        print(f"{Fore.GREEN}Choose level:{Style.RESET_ALL}")
+        print(f"{Fore.GREEN}1.{Style.RESET_ALL} Easy")
+        print(f"{Fore.GREEN}2.{Style.RESET_ALL} Medium")
+        print(f"{Fore.GREEN}3.{Style.RESET_ALL} Hard")
+        print(f"{Fore.GREEN}4.{Style.RESET_ALL} Exit")
     
-        level_choice = input("Enter your choice (1, 2, 3, or 4 to exit): \n")
+        level_choice = input(f"{Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n{Style.RESET_ALL}")
 
         if level_choice == "1":
             word_list = easy_list
@@ -75,7 +77,7 @@ def main():
             welcome_message()
             break
         else:
-            print("Invalid choice. Please enter 1, 2, 3 or 4.")
+            print(f"{Fore.RED}Invalid choice. Please enter 1, 2, 3 or 4.{Style.RESET_ALL}")
 
         word = get_word(word_list)
         play(word)   
@@ -101,25 +103,25 @@ def play(word):
     guessed_words = []
     tries = 6
 
-    print("Let's play Hangman! 🙌")
+    print(f"{Fore.MAGENTA}Let's play Hangman! 🙌{Style.RESET_ALL}")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
 
     while not guessed and tries > 0:
         #Get user's guess
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input(f"{Fore.YELLOW}Please guess a letter or word: {Style.RESET_ALL}").upper()
 
         #Check if the guess is a single letter
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(f"{Fore.RED}You already guessed the letter {guess}.")
+                print(f"{Fore.RED}You already guessed the letter {guess}.{Style.RESET_ALL}")
             elif guess not in word:
-                print(f"{guess} is not in the word.")
+                print(f"{Fore.RED}{guess} is not in the word.{Style.RESET_ALL}")
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print(f"Good job, {guess} is in the word!")
+                print(f"{Fore.CYAN}Good job, {guess} is in the word!{Style.RESET_ALL}")
                 guessed_letters.append(guess)
 
                 # Update the word completion with correct guesses
@@ -136,16 +138,16 @@ def play(word):
         #Check if the guess is a full word
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(f"You already guessed the word {guess}")
+                print(f"{Fore.RED}You already guessed the word {guess}.{Style.RESET_ALL}")
             elif guess != word:
-                print(f"{guess} is not in the word.")
+                print(f"{Fore.RED}{guess} is not in the word.{Style.RESET_ALL}")
                 tries -= 1
                 guessed_words.append(guess)
             else:
                 guessed = True
                 word_completion = word
         else:
-            print("Not a valid guess.")
+            print(f"{Fore.RED}Not a valid guess.{Style.RESET_ALL}")
 
         # Display hangman state and word completion
         print(display_hangman(tries))
@@ -154,10 +156,10 @@ def play(word):
 
     # Print game result
     if guessed:
-        print("Congrats, you guessed the word! You win! 🎉")
+        print(f"{Fore.GREEN}Congrats, you guessed the word! You win!{Style.RESET_ALL} 🎉")
     else:
-        print("Sorry, you ran out of tries. The word was " +
-              word + ". Maybe next time! 😔" )
+        print(f"{Fore.RED}Sorry, you ran out of tries. The word was " +
+              word + ". Maybe next time!😔" )
 
 
 def display_hangman(tries):
