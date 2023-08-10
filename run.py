@@ -1,8 +1,7 @@
-import colorama
-from colorama import Fore, Style
 import random
 import os
-from words import easy_list, medium_list, hard_list
+from colorama import Fore, Style, colorama, init
+from words import *
 
 colorama.init(autoreset=True)
 
@@ -62,7 +61,7 @@ def main():
         print(f"{Fore.GREEN}1.{Style.RESET_ALL} Easy")
         print(f"{Fore.GREEN}2.{Style.RESET_ALL} Medium")
         print(f"{Fore.GREEN}3.{Style.RESET_ALL} Hard")
-        print(f"{Fore.GREEN}4.{Style.RESET_ALL} Exit")
+        print(f"{Fore.RED}4.{Style.RESET_ALL} Exit")
     
         level_choice = input(f"{Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n{Style.RESET_ALL}")
 
