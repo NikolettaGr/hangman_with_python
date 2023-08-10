@@ -68,7 +68,14 @@ def main():
     elif level_choice == "4":
         welcome_message()
     else:
-        print("Invalid choice. Please enter 1, 2, 3 or 4.")               
+        print("Invalid choice. Please enter 1, 2, 3 or 4.")
+
+
+def get_word(word_list):
+    """
+    Randomly selects a word from the given word lists.
+    """
+    random.choice(word_list).upper()
 
 
 
