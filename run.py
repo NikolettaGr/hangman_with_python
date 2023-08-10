@@ -32,4 +32,18 @@ def welcome_message():
     elif choice == "2":
         main()
     else:
-        print("Invalid choice. Please enter 1 or 2.")          
+        print("Invalid choice. Please enter 1 or 2.")
+
+
+def show_rules():
+    """
+    Displays the rules of the Hangman game.
+    """
+    print("""\nThe objective of Hangman is to guess a hidden word letter by letter.\n
+The player has a limited number of attempts to guess the word correctly.\n
+For each incorrect gues, a part of a 'hangman' figure is drawn.\n
+The player wins by guessing the word before the hangman figure is fully drawn,\n
+and loses if the 'hangman' figure is completed before guessing the word.\n""")
+
+clear_screen()                
+welcome_message()
