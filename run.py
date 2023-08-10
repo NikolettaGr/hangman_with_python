@@ -1,3 +1,5 @@
+import colorama
+from colorama import Fore
 import random
 import os
 from words import easy_list, medium_list, hard_list
@@ -111,7 +113,7 @@ def play(word):
         #Check if the guess is a single letter
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(f"You already guessed the letter {guess}.")
+                print(f"{Fore.RED}You already guessed the letter {guess}.")
             elif guess not in word:
                 print(f"{guess} is not in the word.")
                 tries -= 1
