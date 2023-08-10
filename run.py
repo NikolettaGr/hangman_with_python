@@ -2,6 +2,7 @@ import random
 import os
 from colorama import Fore, Style, colorama, init
 from words import *
+import stages 
 
 colorama.init(autoreset=True)
 
@@ -159,86 +160,7 @@ def play(word):
     else:
         print(f"{Fore.RED}Sorry, you ran out of tries. The word was " +
               word + ". Maybe next time!😔" )
-
-
-def display_hangman(tries):
-    """
-    Displays the current state of the hangman figure
-    based on remaining tries.
-    """
-    stages = [
-        """
-                --------
-                |      |
-                |      O
-                |     \\|/
-                |      |
-                |     / \\
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      O
-                |     \\|/
-                |      |
-                |     / 
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      O
-                |     \\|/
-                |      |
-                |      
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      O
-                |     \\|
-                |      |
-                |     
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      O
-                |      |
-                |      |
-                |     
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      O
-                |    
-                |      
-                |     
-                -
-                """,
-
-        """
-                --------
-                |      |
-                |      
-                |    
-                |      
-                |     
-                -
-                """
-    ] 
-    return stages[tries]              
-
+              
 
 clear_screen()                
 welcome_message()
