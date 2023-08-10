@@ -71,8 +71,11 @@ def main():
         elif level_choice == "4":
             clear_screen()
             welcome_message()
+            break
         else:
             print("Invalid choice. Please enter 1, 2, 3 or 4.")
+
+        word = get_word(word_list)    
 
 
 def get_word(word_list):
@@ -81,6 +84,77 @@ def get_word(word_list):
     """
     return random.choice(word_list).upper()
 
+
+def play(word):
+    """
+    Manages the game logic nad gameplay loop for guessing the word.
+    """
+    clear_screen()
+
+    # Initialize game variables
+    word_completion = "_" * len(word)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 6
+
+    print("Let's play Hangman! 🙌")
+    print(display_hangman(tries))
+    print(word_completion)
+    print("\n")
+
+    while not guessed and tries > 0:
+        #Get user's guess
+        guess = input("Please guess a letter or word: ").upper()
+
+        #Check if the guess is a single letter
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print(f"You already guessed the letter {guess}.")
+            elif guess not in word:
+                print(f"{guess} is not in the word.")
+                tries -= 1
+                guessed_letters.append(guess)
+            else:
+                print(f"Good job, {guess} is in the word!")
+                guessed_letters.append(guess)
+
+                # Update the word completion with correct guesses
+                word_as_list = list(word_completion)
+                indices = [index for index in range(len(word)) if word[index] == guess]
+
+                for index in indices:
+                    word_as_list[index] = guess
+                word_completion = "".join(word_as_list)
+
+                if "_" not in word_completion:
+                    guessed = True
+
+        #Check if the guess is a full word
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in guessed_words:
+                print(f"You already guessed the word {guess}")
+            elif guess != word:
+                print(f"{guess} is not in the word.")
+                tries -= 1
+                guessed_words.append(guess)
+            else:
+                guessed = True
+                word_completion = word
+        else:
+            print("Not a valid guess.")
+
+        # Display hangman state and word completion
+        print(display_hangman(tries))
+        print(word_completion)
+        print("\n")
+
+    # Print game result
+    if guessed:
+        print("Congrats, you guessed the word! You win! 🎉")
+    else:
+        print("Sorry, you ran out of tries. The word was " +
+              word + ". Maybe next time! 😔" )                          
 
 
 clear_screen()                
