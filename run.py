@@ -83,6 +83,7 @@ def main():
             break
         else:
             print(f"{Fore.RED}Invalid choice. Please enter 1, 2, 3 or 4.{Style.RESET_ALL}")
+            continue
 
         word = get_word(word_list)
         play(word)   
