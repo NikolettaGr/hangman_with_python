@@ -1,8 +1,10 @@
 import random
 import os
-from colorama import Fore, Style, colorama, init
+import colorama
+from colorama import Fore, Style
 from words import *
-import stages 
+import stages
+from stages import display_hangman
 
 colorama.init(autoreset=True)
 
@@ -23,20 +25,23 @@ def welcome_message():
     print(f"{Fore.GREEN}1.{Style.RESET_ALL} Rules")
     print(f"{Fore.GREEN}2.{Style.RESET_ALL} Start Game")
 
-    choice = input(f"{Fore.YELLOW}Enter your choice (1 or 2): \n{Style.RESET_ALL}")
 
-    if choice == "1":
-        show_rules()
-        print(f"{Fore.GREEN}1.{Style.RESET_ALL}Go back 🔙")
-        answer = input(f"{Fore.YELLOW}Enter number 1 to go back: \n{Style.RESET_ALL}")
-        if answer == "1":
-            clear_screen()
-            welcome_message()
+    
+    while True:
+        choice = input(f"{Fore.YELLOW}Enter your choice (1 or 2): \n{Style.RESET_ALL}")
+        if choice == "1":
+            show_rules()
+            print(f"{Fore.GREEN}1.{Style.RESET_ALL}Go back 🔙")
+            answer = input(f"{Fore.YELLOW}Enter number 1 to go back: \n{Style.RESET_ALL}")
+            if answer == "1":
+                clear_screen()
+                welcome_message()
 
-    elif choice == "2":
-        main()
-    else:
-        print(f"{Fore.RED}Invalid choice. Please enter 1 or 2.{Style.RESET_ALL}")
+        elif choice == "2":
+            main()
+        else:
+            print(f"{Fore.RED}Invalid choice. Please enter 1 or 2.{Style.RESET_ALL}")
+            continue
 
 
 def show_rules():
