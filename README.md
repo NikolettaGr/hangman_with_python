@@ -36,3 +36,80 @@ As they play, users not only enjoy the suspense and challenge but also have the 
 
 * Being a Regular Player, I intend to utilize various words for my guesses in order to relish a variety of gameplay scenarios.
 * As a Repeated Visitor, I anticipate the game's narratives to consistently maintain readability, allowing me to engage in the gaming experience seamlessly without facing any comprehension challenges.
+
+---
+
+## Features
+
+  - **When the program is loaded**
+
+  The user can see a welcoming message which engages to start playing and choose from options:
+
+   1.Rules
+
+   2.Start game
+
+  ![]()
+
+  - **When the user select an option**
+
+  - If the user select number 1, shows in terminal the game rules.
+
+  ![]()
+  
+  - If the user select number 2, shows in terminal the level difficulties.
+
+  ![]()
+
+  In the context of the Hangman game, the different difficulty levels typically refer to the complexity or challenge presented to the player. Here's how the difficulty levels might be categorized:
+
+    1. Easy: In this level, the secret word might be relatively short, and the player would have a higher number of attempts to guess the letters or the word. This level is suitable for beginners or those looking for a more relaxed gameplay experience.
+
+    2. Medium: The secret word's length and complexity increase compared to the easy level. The player may have a moderate number of attempts to guess the word correctly. This level provides a balanced challenge for players with some familiarity with the game.
+
+    3. Hard: This level offers a substantial challenge. The secret word can be quite long or include less common letters. The player may have a limited number of attempts to guess the word, making each choice critical. This level is ideal for experienced players seeking a tough challenge.
+
+These difficulty levels add variety and cater to players with different skill levels, ensuring that both newcomers and seasoned players can enjoy the Hangman game according to their preferences and abilities.
+
+  - **When the user select a level**
+
+  - Depending on which level is chosen, the rules of the game are the same.
+
+  - The game starting when the user select a level.
+
+
+ - **Setup:**
+
+ - A secret word is chosen by the secret-keeper. This  word is usually not revealed to the player.
+ - The player is provided with the number of letters in the secret word, represented by underscores (_).
+ - The player is also given a limited number of attempts (represented by the image of a hangman).
+
+ ![]()
+
+  - **Guessing:**
+  
+  - The player starts guessing letters one by one. Each guess can be a single letter or an entire word.
+  - After each guess, the game provides feedback:
+  - If the guessed letter is in the secret word, it is revealed in the correct positions.
+  - If the guessed letter is not in the word, a part of the hangman figure is drawn (head, body, arms, legs, etc.).
+  - If the player guesses all the letters of the word correctly, they win the game.
+
+  ![]()
+
+ - **Winning and Losing:**
+        
+ - The player wins if they correctly guess the entire word before the hangman figure is fully drawn.
+ - The player loses if they use up all their attempts (the entire hangman figure is drawn) before correctly guessing the word.
+ - When the game is end ,the terminal shows again the level difficulty and Quit option.
+
+ ![]()
+
+ ---
+
+ ## Flowchart
+
+ The flowchart represents the logic of the application:
+
+  ![]
+
+
