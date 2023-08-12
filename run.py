@@ -14,6 +14,7 @@ def clear_screen():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
+
 def welcome_message():
     """
     Displays the welcome message and menu options to
@@ -24,14 +25,13 @@ def welcome_message():
     print(f"{colorama.Fore.GREEN}1.{colorama.Style.RESET_ALL} Rules")
     print(f"{colorama.Fore.GREEN}2.{colorama.Style.RESET_ALL} Start Game")
 
-
-    
     while True:
         choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1 or 2): \n")
         if choice == "1":
             show_rules()
             print(f"{colorama.Fore.GREEN}1.{colorama.Style.RESET_ALL}Go back 🔙")
-            answer = input(f"{colorama.Fore.YELLOW}Enter number 1 to go back: \n")
+            answer = input(
+                f"{colorama.Fore.YELLOW}Enter number 1 to go back: \n")
             if answer == "1":
                 clear_screen()
                 welcome_message()
@@ -67,8 +67,9 @@ def main():
         print(f"{colorama.Fore.GREEN}2.{colorama.Style.RESET_ALL} Medium")
         print(f"{colorama.Fore.GREEN}3.{colorama.Style.RESET_ALL} Hard")
         print(f"{colorama.Fore.RED}4. Exit{colorama.Style.RESET_ALL}")
-    
-        level_choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n")
+
+        level_choice = input(
+            f"{colorama.Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n")
 
         if level_choice == "1":
             word_list = easy_list
@@ -85,7 +86,7 @@ def main():
             continue
 
         word = get_word(word_list)
-        play(word)   
+        play(word)
 
 
 def get_word(word_list):
@@ -114,10 +115,11 @@ def play(word):
     print("\n")
 
     while not guessed and tries > 0:
-        #Get user's guess
-        guess = input(f"{colorama.Fore.YELLOW}Please guess a letter or word: ").upper()
+        # Get user's guess
+        guess = input(
+            f"{colorama.Fore.YELLOW}Please guess a letter or word: ").upper()
 
-        #Check if the guess is a single letter
+        # Check if the guess is a single letter
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{colorama.Fore.RED}You already guessed the letter {guess}.")
@@ -131,16 +133,17 @@ def play(word):
 
                 # Update the word completion with correct guesses
                 word_as_list = list(word_completion)
-                indices = [index for index in range(len(word)) if word[index] == guess]
+                indices = [index for index in range(
+                    len(word)) if word[index] == guess]
 
                 for index in indices:
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
-           
+
                 if "_" not in word_completion:
                     guessed = True
 
-        #Check if the guess is a full word
+        # Check if the guess is a full word
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
                 print(f"{colorama.Fore.RED}You already guessed the word {guess}.")
@@ -164,11 +167,12 @@ def play(word):
         print(f"{colorama.Fore.GREEN}Congrats, you guessed the word! You win! 🎉")
     else:
         print(f"{colorama.Fore.RED}Sorry, you ran out of tries. The word was " +
-              word + ". Maybe next time!😔" )
-              
+              word + ". Maybe next time!😔")
+
 
 def call():
-    clear_screen()                
+    clear_screen()
     welcome_message()
+
 
 call()
