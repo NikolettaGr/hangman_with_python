@@ -26,3 +26,13 @@ As they play, users not only enjoy the suspense and challenge but also have the 
 ---
 ## User Stories
 ### First Time Visitpr Goals:
+
+* As a First Time Visitor, I want to quickly understand the program's primary purpose so that I can learn more about this program.
+* As a First Time Visitor, I want to navigate through the program easily so that I can find the content.
+* As a First Time Visitor, I want to find the program useful for myself so that I can fulfill my expectations.
+* As a First Time Visitor, I want to see different text colors so I can easily read the story.
+
+### Frequent Visitor Goals:
+
+* Being a Regular Player, I intend to utilize various words for my guesses in order to relish a variety of gameplay scenarios.
+* As a Repeated Visitor, I anticipate the game's narratives to consistently maintain readability, allowing me to engage in the gaming experience seamlessly without facing any comprehension challenges.
