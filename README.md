@@ -115,6 +115,34 @@ These difficulty levels add variety and cater to players with different skill le
 
 
 ---
+## Technologies Used
+
+### Languages:
+
+ - [Python 3.11.4](https://www.python.org/downloads/): used to anchor the project and direct all application behavior
+ - [JavaScript](https://www.javascript.com/): used to provide the start script needed to run the Code Institute mock terminal in the browser
+ - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) used to construct the elements involved in building the mock terminal in the browser
+
+### Frameworks/Libraries, Programmes and Tools:
+#### Python modules/packages:
+
+#### Standard Library imports:
+
+- [random](https://docs.python.org/3/library/random.html) was used to implement pseudo-random number generation.
+- [os](https://docs.python.org/3/library/os.html ) was used to clear the terminal before running the program.
+
+##### Third-party imports:
+
+- [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
+
+#### Other tools:
+
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+- [Miro.com](https://miro.com/app/dashboard/) was used to make a flowchart for the README file.
+
+
 
 
 
