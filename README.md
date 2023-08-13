@@ -204,7 +204,13 @@ Please refer to the [TESTING.md](TESTING.md) file for all test related documenta
  - Color formatting: [Colorama](https://pypi.org/project/colorama/).
  - KiteHQ YouTube channel helped many and I followed many steps to understand the whole game: [KiteHQ](https://www.youtube.com/watch?v=m4nEnsavl6w)
 
- 
+
+---
+## Aknowledgements
+
+ [Iuliia Konovalova](https://github.com/IuliiaKonovalova)
+
+ I am enormously thankful to my mentor Iuliia Konovalova for her guidance and valuable feedback!
 
 
 
