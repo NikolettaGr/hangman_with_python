@@ -182,6 +182,29 @@ These difficulty levels add variety and cater to players with different skill le
   - *Solution:* I called the function inside the right functions.
 
 
++ **Unsolved bugs**
+   
+  - None.
+
+  
+---
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all test related documentation.
+
+---
+## Deployment
+
+- 
+
+
+---
+## Credits
+
+ - Color formatting: [Colorama](https://pypi.org/project/colorama/).
+ - KiteHQ YouTube channel helped many and I followed many steps to understand the whole game: [KiteHQ](https://www.youtube.com/watch?v=m4nEnsavl6w)
+
+ 
 
 
 
