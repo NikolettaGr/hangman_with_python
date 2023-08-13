@@ -77,12 +77,14 @@ These difficulty levels add variety and cater to players with different skill le
 
   - The game starting when the user select a level.
 
+  ![]()
 
- - **Setup:**
 
- - A secret word is chosen by the secret-keeper. This  word is usually not revealed to the player.
- - The player is provided with the number of letters in the secret word, represented by underscores (_).
- - The player is also given a limited number of attempts (represented by the image of a hangman).
+  - **Setup:**
+
+  - A secret word is chosen by the secret-keeper. This  word is usually not revealed to the player.
+  - The player is provided with the number of letters in the secret word, represented by underscores (_).
+  - The player is also given a limited number of attempts (represented by the image of a hangman).
 
  ![]()
 
@@ -180,6 +182,8 @@ These difficulty levels add variety and cater to players with different skill le
  2.Function  ```clear_screen``` was not called at the right place ,so it was not working.
 
   - *Solution:* I called the function inside the right functions.
+
+
 
 
 + **Unsolved bugs**
