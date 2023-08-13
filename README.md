@@ -110,7 +110,7 @@ These difficulty levels add variety and cater to players with different skill le
 
  The flowchart represents the logic of the application:
 
-  ![Image](/hangman_with_python/documentation/flowchart.png)
+  ![Image](hangman_with_python/documentation/flowchart.png)
 
 
 
@@ -142,6 +142,14 @@ These difficulty levels add variety and cater to players with different skill le
 - [GitHub](https://github.com/) was used to host the code of the website.
 - [Miro.com](https://miro.com/app/dashboard/) was used to make a flowchart for the README file.
 
+
+---
+
+## Bugs 
+
++ **Solved bugs**
+
+1.I 
 
 
 
