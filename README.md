@@ -149,7 +149,38 @@ These difficulty levels add variety and cater to players with different skill le
 
 + **Solved bugs**
 
-1.I 
+1.While coding, I encountered a bug where, upon pressing any key other than those expected, the terminal responded with the message "command not found".
+
+![Bug](hangman_with_python/documentation/bug-python.png)
+
+ - *Solution:* in some functions was added a while loop and continue statement
+
+  ```python
+   while True:
+        choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1 or 2): \n")
+        if choice == "1":
+            show_rules()
+            print(f"{colorama.Fore.GREEN}1.{colorama.Style.RESET_ALL}Go back 🔙")
+            answer = input(
+                f"{colorama.Fore.YELLOW}Enter number 1 to go back: \n")
+            if answer == "1":
+                clear_screen()
+                welcome_message()
+
+        elif choice == "2":
+            main()
+        else:
+            print(f"{colorama.Fore.RED}Invalid choice. Please enter 1 or 2.")
+            continue
+  ```
+ 
+ ![Solved Bug](hangman_with_python/documentation/solved-bug.png)
+
+
+ 2.Function  ```clear_screen``` was not called at the right place ,so it was not working.
+
+  - *Solution:* I called the function inside the right functions.
+
 
 
 
