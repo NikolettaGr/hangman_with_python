@@ -47,8 +47,7 @@ def show_rules():
     """
     Displays the rules of the Hangman game.
     """
-    print(f"""{colorama.Fore.GREEN}\nThe objective of Hangman is to \n
-guess a hidden word letter by letter.
+    print(f"""{colorama.Fore.GREEN}\nThe objective of Hangman is to guess a hidden word letter by letter.\n
 The player has a limited number of attempts to guess the word correctly.\n
 For each incorrect gues, a part of a 'hangman' figure is drawn.\n
 The player wins by guessing the word before the hangman figure is fully drawn,\n
