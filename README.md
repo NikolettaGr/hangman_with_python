@@ -1,6 +1,6 @@
 # Hangman Game
 
-*The link to [Hangam Game]()
+*The link to [Hangman Game]()
 
 "Hangman Adventure" is an exhilarating terminal-based Python project designed to engage users and deliver diverse experiences.
 
