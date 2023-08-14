@@ -112,7 +112,7 @@ These difficulty levels add variety and cater to players with different skill le
 
  The flowchart represents the logic of the application:
 
-  ![Image](hangman_with_python/documentation/flowchart.png)
+  ![Image](documentation/flowchart.png)
 
 
 
