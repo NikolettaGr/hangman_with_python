@@ -153,7 +153,7 @@ These difficulty levels add variety and cater to players with different skill le
 
 1.While coding, I encountered a bug where, upon pressing any key other than those expected, the terminal responded with the message "command not found".
 
-![Bug](hangman_with_python/documentation/bug-python.png)
+![Bug](documentation/bug-python.png)
 
  - *Solution:* in some functions was added a while loop and continue statement
 
@@ -176,7 +176,7 @@ These difficulty levels add variety and cater to players with different skill le
             continue
   ```
  
- ![Solved Bug](hangman_with_python/documentation/solved-bug.png)
+ ![Solved Bug](documentation/solved-bug.png)
 
 
  2.Function  ```clear_screen``` was not called at the right place ,so it was not working.
