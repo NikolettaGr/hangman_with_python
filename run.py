@@ -30,8 +30,6 @@ def welcome_message():
         if choice == "1":
             show_rules()
             wait_for_any_key()
-            
-            
         elif choice == "2":
             main()
         else:
@@ -53,7 +51,7 @@ def show_rules():
 The objective of Hangman is to guess a hidden word letter by letter.\n
 The player has a limited number of attempts to guess the word correctly.\n
 For each incorrect gues, a part of a 'hangman' figure is drawn.\n
-The player wins by guessing the word before the hangman figure is fully drawn,\n
+Player wins by guessing the word before the hangman figure is fully drawn,\n
 and loses if the 'hangman' figure is completed before guessing the word.\n""")
 
 
@@ -174,8 +172,8 @@ You already guessed the word {guess}.""")
 Congrats, you guessed the word! You win! 🎉""")
         print("-----------------------------------------")
     else:
-        print(f"{colorama.Fore.RED}Sorry, you ran out of tries. The word was " +
-word + ". Maybe next time!😔")
+        print(f"""{colorama.Fore.RED}
+Sorry, you ran out of tries. The word was " + word + ". Maybe next time!😔""")
         print("------------------------------------------")
 
 
@@ -185,5 +183,3 @@ def call():
 
 
 call()
-
-
