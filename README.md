@@ -217,15 +217,15 @@ These difficulty levels add variety and cater to players with different skill le
      welcome_message()
      ```
 
-  ![Solved Bug](documentation/solved-bug2.png)
+![Solved Bug](documentation/solved-bug2.png)
 
 
 3. Function  ```clear_screen``` was not called at the right place ,so it was not working.
 
- - *Solution:* I called the function inside the right functions.
+ - *Solution*: I called the function inside the right functions.
 
 
- + **Unsolved bugs**
++ **Unsolved bugs**
    
   - None.
 
@@ -274,49 +274,49 @@ Create a local copy of the GitHub repository by following one of the two process
 
 2. Create a new application on the following page here [New Render App](https://dashboard.render.com/), choose **Webserver**:
     
-    - ![New Render App](documentation/render-account.png)
+   ![New Render App](documentation/render-account.png)
 
 3. Select the GitHub option and connect the application to the repository you created.
     
-    - ![GitHub Opetion](/documentation/step2-render.png)
+    ![GitHub Opetion](/documentation/step2-render.png)
 
 4. Search for the repository you created and click "Connect."
     
-    - ![Connect to GitHub](documentation/step3.png)
+    ![Connect to GitHub](documentation/step3.png)
 
-    - ![Connect to GitHub](documentation/step4.png)
+    ![Connect to GitHub](documentation/step4.png)
 
 5. Create name for the application
 
-    - ![Create App Name](documentation/step5.png)
+    ![Create App Name](documentation/step5.png)
 
 6. Select the region where you want to deploy the application.
 
-    - ![Select Region](documentation/step6.png)
+    ![Select Region](documentation/step6.png)
 
 7. Select branch to deploy.
 
-    - ![elect Branch](documentation/step7.png)
+    ![elect Branch](documentation/step7.png)
 
 8. Select environment.
 
-    - ![Select Environment variables](documentation/environment.png)
+    ![Select Environment variables](documentation/environment.png)
 
 9. Render build command: `pip3 install -r requirements.txt && npm install`
 
-    - ![Render Build Command](documentation/step8.png)
+    ![Render Build Command](documentation/step8.png)
 
 10. Render start command: `node index.js`
 
-    - ![Render Start Command](documentation/step9.png)
+    ![Render Start Command](documentation/step9.png)
 
 11. Select Free plan.
 
-    - ![Select Free Plan](documentation/freeplan.png)
+    ![Select Free Plan](documentation/freeplan.png)
 
 12. Click on "Advanced" settings.
 
-    - ![Advanced Settings](documentation/step10.png)
+    ![Advanced Settings](documentation/step10.png)
 
 13. Add the following environment variables:
 
@@ -327,7 +327,7 @@ Create a local copy of the GitHub repository by following one of the two process
 
 14. Click "Create Web Service."
 
-    - ![Save Web Service](documentation/step12.png)
+    ![Save Web Service](documentation/step12.png)
 
 15. Wait for the completion of the deployment.
 
