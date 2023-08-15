@@ -173,7 +173,8 @@ Congrats, you guessed the word! You win! 🎉""")
         print("-----------------------------------------")
     else:
         print(f"""{colorama.Fore.RED}
-Sorry, you ran out of tries. The word was " + word + ". Maybe next time!😔""")
+Sorry, you ran out of tries. The word was {colorama.Fore.CYAN}"{word}"
+{colorama.Fore.RED}. Maybe next time!😔""")
         print("------------------------------------------")
 
 
