@@ -2,7 +2,7 @@ import random
 import os
 import colorama
 from words import *
-from stages import display_hangman
+from stages import *
 
 colorama.init(autoreset=True)
 
