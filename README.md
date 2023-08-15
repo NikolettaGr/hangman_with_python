@@ -1,6 +1,6 @@
 # Hangman Game
 
-*The link to [Hangman Game]()
+*The link to [Hangman Game](https://hangman-game-k5vx.onrender.com/)
 
 "Hangman Adventure" is an exhilarating terminal-based Python project designed to engage users and deliver diverse experiences.
 
@@ -14,7 +14,7 @@ As they play, users not only enjoy the suspense and challenge but also have the 
 
 ## How to play:
 
-  1. Click this *[link]()* or copy this text: `` and paste it in your browser's address bar.
+  1. Click this *[link](https://hangman-game-k5vx.onrender.com/)* or copy this text: `https://hangman-game-k5vx.onrender.com/` and paste it in your browser's address bar.
   2. Once the page is loaded, click 'RUN PROGRAM.'
   3. Choose from the options.
   4. If you choose 1 ,learn the rules.If you choose 2,start the game.
