@@ -215,14 +215,14 @@ These difficulty levels add variety and cater to players with different skill le
      input()  # Wait for any key press
      clear_screen()
      welcome_message()
-     ```
+```
 
 ![Solved Bug](documentation/solved-bug2.png)
 
 
 3. Function  ```clear_screen``` was not called at the right place ,so it was not working.
 
- - *Solution*: I called the function inside the right functions.
+ - *Solution:* I called the function inside the right functions.
 
 
 + **Unsolved bugs**
@@ -323,7 +323,7 @@ Create a local copy of the GitHub repository by following one of the two process
     - Key: PORT Value: 8000
     - Key: PYTHON_VERSION Value: 3.10.7
 
-    - ![Add Environment Variables](documentation/step11.png)
+    ![Add Environment Variables](documentation/step11.png)
 
 14. Click "Create Web Service."
 
