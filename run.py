@@ -29,13 +29,9 @@ def welcome_message():
         choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1 or 2): \n")
         if choice == "1":
             show_rules()
-            print(f"{colorama.Fore.MAGENTA}1.Go back 🔙")
-            answer = input(
-                f"{colorama.Fore.YELLOW}Enter number {colorama.Fore.MAGENTA}1{colorama.Style.RESET_ALL} {colorama.Fore.YELLOW}to go back: \n")
-            if answer == "1":
-                clear_screen()
-                welcome_message()
-
+            wait_for_any_key()
+            
+            
         elif choice == "2":
             main()
         else:
@@ -43,11 +39,18 @@ def welcome_message():
             continue
 
 
+def wait_for_any_key():
+    print(f"{colorama.Fore.YELLOW}Press any key to go back...")
+    input()  # Wait for any key press
+    welcome_message()
+
+
 def show_rules():
     """
     Displays the rules of the Hangman game.
     """
-    print(f"""{colorama.Fore.GREEN}\nThe objective of Hangman is to guess a hidden word letter by letter.\n
+    print(f"""{colorama.Fore.GREEN}
+The objective of Hangman is to guess a hidden word letter by letter.\n
 The player has a limited number of attempts to guess the word correctly.\n
 For each incorrect gues, a part of a 'hangman' figure is drawn.\n
 The player wins by guessing the word before the hangman figure is fully drawn,\n
@@ -178,3 +181,4 @@ def call():
 
 
 call()
+
