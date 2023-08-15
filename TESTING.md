@@ -10,6 +10,19 @@ Other users also tested it in order to spot possible grammatical mistakes that t
 Heroku's online validator [online validation tool](https://pep8ci.herokuapp.com/) was used to ensure that all of the project's Python source code is [Pep 8-compliant](https://legacy.python.org/dev/peps/pep-0008/). 
 This checking was done manually by copying python code and pasting it into the validator.
 
+- **run.py**
+
+![Python Validator](documentation/pep8-run.py.png)
+
+- **words.py**
+
+![Python Validator](documentation/pep8-word-list.png)
+
+- **stages.py** - The PEP8 validator is highlighting numerous whitespace issues, but I'm hesitant to remove them, as doing so could disrupt the positioning of the hangman figures and potentially cause the game to malfunction.
+
+![Python Validator](documentation/pep8-stages.png)
+
+
 
 ### Manually testing
 
