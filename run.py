@@ -39,6 +39,11 @@ def welcome_message():
 
 
 def wait_for_any_key():
+    """
+    This function prompts the user to press any key in order to continue.
+    After receiving a key press, it clears the
+    terminal or console screen and displays a welcome message.
+    """
     print(f"{colorama.Fore.YELLOW}Press any key to go back...")
     input()  # Wait for any key press
     clear_screen()
@@ -46,9 +51,7 @@ def wait_for_any_key():
 
 
 def show_rules():
-    """
-    Displays the rules of the Hangman game.
-    """
+    """Displays the rules of the Hangman game."""
     print(f"""{colorama.Fore.GREEN}
 The objective of Hangman is to guess a hidden word letter by letter.\n
 The player has a limited number of attempts to guess the word correctly.\n
@@ -71,9 +74,11 @@ def main():
         print(f"{colorama.Fore.GREEN}3.{colorama.Style.RESET_ALL} Hard")
         print(f"{colorama.Fore.RED}4. Exit{colorama.Style.RESET_ALL}")
 
-        level_choice = input(f"""{colorama.Fore.YELLOW}
-Enter your choice (1, 2, 3, or 4 to exit): \n""")
-
+        level_choice = input(
+f"""
+{colorama.Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n
+"""
+)
         if level_choice == "1":
             word_list = easy_list
         elif level_choice == "2":
@@ -94,9 +99,7 @@ Invalid choice. Please enter 1, 2, 3 or 4.""")
 
 
 def get_word(word_list):
-    """
-    Randomly selects a word from the given word lists.
-    """
+    """Randomly selects a word from the given word lists."""
     return random.choice(word_list).upper()
 
 
@@ -181,6 +184,13 @@ Sorry, you ran out of tries. The word was {colorama.Fore.CYAN}"{word}"
 
 
 def call():
+    """
+    Clears the screen and displays a welcome message.
+    This function clears the terminal or console
+    screen and then displays a welcome message to the user.
+    It is intended to be used at the beginning of a program to provide a clean
+    starting point for user interaction.
+    """
     clear_screen()
     welcome_message()
 
