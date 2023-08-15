@@ -49,17 +49,17 @@ As they play, users not only enjoy the suspense and challenge but also have the 
 
    2.Start game
 
-  ![]()
+  ![Welcome message](documentation/welcome-message.png)
 
   - **When the user select an option**
 
   - If the user select number 1, shows in terminal the game rules.
 
-  ![]()
+  ![Rules](documentation/rules.png)
   
   - If the user select number 2, shows in terminal the level difficulties.
 
-  ![]()
+  ![Level difficulty](documentation/level-difficulty.png)
 
   In the context of the Hangman game, the different difficulty levels typically refer to the complexity or challenge presented to the player. Here's how the difficulty levels might be categorized:
 
@@ -77,16 +77,14 @@ These difficulty levels add variety and cater to players with different skill le
 
   - The game starting when the user select a level.
 
-  ![]()
-
 
   - **Setup:**
 
-  - A secret word is chosen by the secret-keeper. This  word is usually not revealed to the player.
+  - A secret word is chosen by the secret-keeper.(In this case by computer). This  word is usually not revealed to the player.
   - The player is provided with the number of letters in the secret word, represented by underscores (_).
   - The player is also given a limited number of attempts (represented by the image of a hangman).
 
- ![]()
+ ![Setup](documentation/setup.png)
 
   - **Guessing:**
   
@@ -96,7 +94,9 @@ These difficulty levels add variety and cater to players with different skill le
   - If the guessed letter is not in the word, a part of the hangman figure is drawn (head, body, arms, legs, etc.).
   - If the player guesses all the letters of the word correctly, they win the game.
 
-  ![]()
+  ![Guessing](documentation/guessing.png)
+  ![Right guess](documentation/guessing1.png)
+  ![Wrong guess](documentation/guessing2.png)
 
  - **Winning and Losing:**
         
@@ -104,7 +104,8 @@ These difficulty levels add variety and cater to players with different skill le
  - The player loses if they use up all their attempts (the entire hangman figure is drawn) before correctly guessing the word.
  - When the game is end ,the terminal shows again the level difficulty and Quit option.
 
- ![]()
+ ![Win](documentation/winning.png)
+ ![Loose](documentation/loosing.png)
 
  ---
 
@@ -151,7 +152,7 @@ These difficulty levels add variety and cater to players with different skill le
 
 + **Solved bugs**
 
-1.While coding, I encountered a bug where, upon pressing any key other than those expected, the terminal responded with the message "command not found".
+1. While coding, I encountered a bug where, upon pressing any key other than those expected, the terminal responded with the message "command not found".
 
 ![Bug](documentation/bug-python.png)
 
@@ -178,10 +179,51 @@ These difficulty levels add variety and cater to players with different skill le
  
  ![Solved Bug](documentation/solved-bug.png)
 
+ 
 
- 2.Function  ```clear_screen``` was not called at the right place ,so it was not working.
+2. When the user want to go back from the rules and type any other key then expected, displaying to choose from number 1 or 2.
 
-  - *Solution:* I called the function inside the right functions.
+![Bug](documentation/bug222.png)
+
+ - *Solution:* I made function ```wait_for_any_key``` and called in ```welcome_message``` at the right place.
+
+ ```python
+ def welcome_message():
+     """
+     Displays the welcome message and menu options to
+     the player.
+     """
+     print(f"{colorama.Back.MAGENTA}Welcome to Hangman Game!😀")
+     print(f"{colorama.Fore.GREEN}Options:{colorama.Style.RESET_ALL}")
+     print(f"{colorama.Fore.GREEN}1.{colorama.Style.RESET_ALL} Rules")
+     print(f"{colorama.Fore.GREEN}2.{colorama.Style.RESET_ALL} Start Game")
+
+     while True:
+         choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1 or 2): \n")
+         clear_screen()
+         if choice == "1":
+             show_rules()
+             wait_for_any_key()
+         elif choice == "2":
+             main()
+         else:
+             print(f"{colorama.Fore.RED}Invalid choice. Please enter 1 or 2.")
+             continue
+
+
+ def wait_for_any_key():
+     print(f"{colorama.Fore.YELLOW}Press any key to go back...")
+     input()  # Wait for any key press
+     clear_screen()
+     welcome_message()
+     ```
+
+![Solved Bug](documentation/solved-bug2.png)
+
+
+3. Function  ```clear_screen``` was not called at the right place ,so it was not working.
+
+ - *Solution:* I called the function inside the right functions.
 
 
 
