@@ -20,7 +20,7 @@ def welcome_message():
     Displays the welcome message and menu options to
     the player.
     """
-    print(f"{colorama.Fore.MAGENTA}Welcome to Hangman Game! 😀")
+    print(f"{colorama.Back.MAGENTA}Welcome to Hangman Game!😀")
     print(f"{colorama.Fore.GREEN}Options:{colorama.Style.RESET_ALL}")
     print(f"{colorama.Fore.GREEN}1.{colorama.Style.RESET_ALL} Rules")
     print(f"{colorama.Fore.GREEN}2.{colorama.Style.RESET_ALL} Start Game")
@@ -113,7 +113,7 @@ def play(word):
     guessed_words = []
     tries = 6
 
-    print(f"{colorama.Fore.MAGENTA}Let's play Hangman! 🙌")
+    print(f"{colorama.Back.MAGENTA}Let's play Hangman! 🙌")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
