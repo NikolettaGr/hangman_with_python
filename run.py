@@ -27,6 +27,7 @@ def welcome_message():
 
     while True:
         choice = input(f"{colorama.Fore.YELLOW}Enter your choice (1 or 2): \n")
+        clear_screen()
         if choice == "1":
             show_rules()
             wait_for_any_key()
@@ -40,6 +41,7 @@ def welcome_message():
 def wait_for_any_key():
     print(f"{colorama.Fore.YELLOW}Press any key to go back...")
     input()  # Wait for any key press
+    clear_screen()
     welcome_message()
 
 
