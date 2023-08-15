@@ -94,7 +94,6 @@ These difficulty levels add variety and cater to players with different skill le
   - If the guessed letter is not in the word, a part of the hangman figure is drawn (head, body, arms, legs, etc.).
   - If the player guesses all the letters of the word correctly, they win the game.
 
-  ![Guessing](documentation/guessing.png)
   ![Right guess](documentation/guessing1.png)
   ![Wrong guess](documentation/guessing2.png)
 
@@ -218,7 +217,7 @@ These difficulty levels add variety and cater to players with different skill le
      welcome_message()
      ```
 
-![Solved Bug](documentation/solved-bug2.png)
+  ![Solved Bug](documentation/solved-bug2.png)
 
 
 3. Function  ```clear_screen``` was not called at the right place ,so it was not working.
@@ -226,9 +225,7 @@ These difficulty levels add variety and cater to players with different skill le
  - *Solution:* I called the function inside the right functions.
 
 
-
-
-+ **Unsolved bugs**
+ + **Unsolved bugs**
    
   - None.
 
@@ -241,7 +238,98 @@ Please refer to the [TESTING.md](TESTING.md) file for all test related documenta
 ---
 ## Deployment
 
-- 
+- The program was deployed to [Render](https://render.com/)
+- The program can be reached by the [link](https://hangman-game-k5vx.onrender.com)
+### To deploy the project as an application that can be **run locally**:
+
+*Note:*
+  1. This project requires you to have Python installed on your local PC:
+  - `sudo apt install python3`
+
+  1. You will also need pip installed to allow the installation of modules the application uses.
+  - `sudo apt install python3-pip`
+
+Create a local copy of the GitHub repository by following one of the two processes below:
+
+- Download ZIP file:
+  1. Go to the [GitHub Repo page](https://github.com/NikolettaGr/hangman_with_python/tree/main).
+  1. Click the Code button and download the ZIP file containing the project.
+  1. Extract the ZIP file to a location on your PC.
+
+- Clone the repository:
+  1. Open a folder on your computer with the terminal.
+  1. Run the following command
+  - `git clone https://github.com/NikolettaGr/hangman_with_python.git`
+
+1. Install Python module dependencies:
+     
+      1. Navigate to the folder madlib_with_python by executing the command:
+      - `cd madlib_with_python`
+      1. Run the command pip install -r requirements.txt
+      - `pip3 install -r requirements.txt`
+
+### To deploy the project to Render so it can be run as a remote web application:
+
+1. Create a new Render account if you don't already have one here [Render](https://render.com/).
+
+2. Create a new application on the following page here [New Render App](https://dashboard.render.com/), choose **Webserver**:
+    
+    - ![New Render App](documentation/render-account.png)
+
+3. Select the GitHub option and connect the application to the repository you created.
+    
+    - ![GitHub Opetion](/documentation/step2-render.png)
+
+4. Search for the repository you created and click "Connect."
+    
+    - ![Connect to GitHub](documentation/step3.png)
+
+    - ![Connect to GitHub](documentation/step4.png)
+
+5. Create name for the application
+
+    - ![Create App Name](documentation/step5.png)
+
+6. Select the region where you want to deploy the application.
+
+    - ![Select Region](documentation/step6.png)
+
+7. Select branch to deploy.
+
+    - ![elect Branch](documentation/step7.png)
+
+8. Select environment.
+
+    - ![Select Environment variables](documentation/environment.png)
+
+9. Render build command: `pip3 install -r requirements.txt && npm install`
+
+    - ![Render Build Command](documentation/step8.png)
+
+10. Render start command: `node index.js`
+
+    - ![Render Start Command](documentation/step9.png)
+
+11. Select Free plan.
+
+    - ![Select Free Plan](documentation/freeplan.png)
+
+12. Click on "Advanced" settings.
+
+    - ![Advanced Settings](documentation/step10.png)
+
+13. Add the following environment variables:
+
+    - Key: PORT Value: 8000
+    - Key: PYTHON_VERSION Value: 3.10.7
+
+    - ![Add Environment Variables](documentation/step11.png)
+
+14. Click "Create Web Service."
+
+    - ![Save Web Service](documentation/step12.png)
+
+15. Wait for the completion of the deployment.
 
 
 ---
