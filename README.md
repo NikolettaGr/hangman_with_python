@@ -143,6 +143,7 @@ These difficulty levels add variety and cater to players with different skill le
 - [Git](https://git-scm.com/) was used for the version control of the website.
 - [GitHub](https://github.com/) was used to host the code of the website.
 - [Miro.com](https://miro.com/app/dashboard/) was used to make a flowchart for the README file.
+- [Render.com](https://render.com/) was used to deploy my project.
 
 
 ---
