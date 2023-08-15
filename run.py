@@ -74,11 +74,9 @@ def main():
         print(f"{colorama.Fore.GREEN}3.{colorama.Style.RESET_ALL} Hard")
         print(f"{colorama.Fore.RED}4. Exit{colorama.Style.RESET_ALL}")
 
-        level_choice = input(
-f"""
+        level_choice = input(f"""
 {colorama.Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n
-"""
-)
+""")
         if level_choice == "1":
             word_list = easy_list
         elif level_choice == "2":
