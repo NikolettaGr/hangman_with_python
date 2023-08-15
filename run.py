@@ -71,8 +71,8 @@ def main():
         print(f"{colorama.Fore.GREEN}3.{colorama.Style.RESET_ALL} Hard")
         print(f"{colorama.Fore.RED}4. Exit{colorama.Style.RESET_ALL}")
 
-        level_choice = input(
-            f"{colorama.Fore.YELLOW}Enter your choice (1, 2, 3, or 4 to exit): \n")
+        level_choice = input(f"""{colorama.Fore.YELLOW}
+Enter your choice (1, 2, 3, or 4 to exit): \n""")
 
         if level_choice == "1":
             word_list = easy_list
@@ -85,7 +85,8 @@ def main():
             welcome_message()
             break
         else:
-            print(f"{colorama.Fore.RED}Invalid choice. Please enter 1, 2, 3 or 4.")
+            print(f"""{colorama.Fore.RED}
+Invalid choice. Please enter 1, 2, 3 or 4.""")
             continue
 
         word = get_word(word_list)
@@ -125,7 +126,8 @@ def play(word):
         # Check if the guess is a single letter
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print(f"{colorama.Fore.RED}You already guessed the letter {guess}.")
+                print(f"""{colorama.Fore.RED}
+You already guessed the letter {guess}.""")
             elif guess not in word:
                 print(f"{colorama.Fore.RED}{guess} is not in the word.")
                 tries -= 1
@@ -149,7 +151,8 @@ def play(word):
         # Check if the guess is a full word
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print(f"{colorama.Fore.RED}You already guessed the word {guess}.")
+                print(f"""{colorama.Fore.RED}
+You already guessed the word {guess}.""")
             elif guess != word:
                 print(f"{colorama.Fore.RED}{guess} is not in the word.")
                 tries -= 1
@@ -167,11 +170,12 @@ def play(word):
 
     # Print game result
     if guessed:
-        print(f"{colorama.Fore.GREEN}Congrats, you guessed the word! You win! 🎉")
+        print(f"""{colorama.Fore.GREEN}
+Congrats, you guessed the word! You win! 🎉""")
         print("-----------------------------------------")
     else:
         print(f"{colorama.Fore.RED}Sorry, you ran out of tries. The word was " +
-              word + ". Maybe next time!😔")
+word + ". Maybe next time!😔")
         print("------------------------------------------")
 
 
